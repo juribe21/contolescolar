@@ -1,0 +1,130 @@
+<H2>Alumno Datos Principales</H2>
+
+
+<app-alumnobuscar (xnombre)="buscarAlumno($event)" (xnofolio)="buscarAlumno($event)"></app-alumnobuscar>
+<hr>
+
+
+<ng-container>
+  <div class="container">
+
+
+    <form #newAlumno="ngForm" (submit)="guardarCambios(newAlumno.value)" [formGroup]="form">
+      <div class="row">
+        <mat-form-field appearance="outline">
+          <mat-label>Folio</mat-label>
+          <input formControlName="noFolio" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>No. Control</mat-label>
+          <input formControlName="noControl" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input formControlName="nombreAlumno" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Apellido Paterno</mat-label>
+          <input formControlName="apellidoPaterno" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Apelido Materno</mat-label>
+          <input formControlName="apellidoMaterno" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Sexo</mat-label>
+          <mat-select formControlName="sexoId">
+            <mat-option *ngFor="let sexo of sexos" [value]="sexo.sexoId">{{sexo.descripcionSexo}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Estado Alumno</mat-label>
+          <mat-select formControlName="estadoAlumnoId">
+            <mat-option *ngFor="let estado of estadosAlumnos" [value]="estado.estadoAlumnoId">{{estado.edoAlumno}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Edad</mat-label>
+          <input formControlName="edadAlumno" matInput />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Fecha Nacimiento</mat-label>
+          <input formControlName="fecha" matInput [matDatepicker]="picker" />
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+      </div>
+
+      <div class="row">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Ciudad de Nacimiento</mat-label>
+          <mat-select [(ngModel)]="newAlumno.value.ciudadId" formControlName="ciudadId">
+            <mat-option *ngFor="let ciudad of ciudades" [value]="ciudad.ciudadId">{{ciudad.nombreCiudad}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Estado de Nacimiento</mat-label>
+          <mat-select formControlName="entidadFederativaId">
+            <mat-option *ngFor="let entidad of estadosNacimiento" [value]="entidad.entidadFederativaId">
+              {{entidad.nombreEstado}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+
+
+        <mat-form-field appearance="outline">
+          <mat-label>Nacionalidad</mat-label>
+          <mat-select formControlName="paisId">
+            <mat-option *ngFor="let pais of paises" [value]="pais.paisid">{{pais.nombrePais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <div class="checbox">
+          <mat-checkbox formControlName="gobierno">Gobierno</mat-checkbox>
+        </div>
+
+
+      </div>
+
+      <div class="controles">
+        <button mat-flat-button color="primary" type="submit">
+          Guardar Cambios
+        </button>
+        <a mat-stroked-button routerLink="">
+          Cancelar
+        </a>
+      </div>
+
+    </form>
+
+  </div>
+</ng-container>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div>
+    <input type="file" style="display: nobne;" #cargar>
+    <button (click)="cargar.click()">Cargar Foto</button>
+  </div> -->

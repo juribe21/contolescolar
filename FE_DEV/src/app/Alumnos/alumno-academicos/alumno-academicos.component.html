@@ -1,0 +1,59 @@
+<h2>Alumnos Datos Academicos</h2>
+
+<app-alumnobuscar (xnombre)="buscarAlumno($event)" (xnofolio)="buscarAlumno($event)"></app-alumnobuscar>
+<hr>
+
+<form #newAlumno="ngForm" (submit)="guardarCambios(newAlumno.value)" [formGroup]="form">
+
+  <div class="col-md-4">
+    <mat-form-field appearance="outline">
+      <mat-label>Estado de Procedencia</mat-label>
+      <mat-select formControlName="estadoProcedenciaId">
+        <mat-option *ngFor="let entidad of estadosNacimiento" [value]="entidad.entidadFederativaId">
+          {{entidad.nombreEstado}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Colegio Procedencia</mat-label>
+      <input formControlName="escuelaProcedencia" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Clave Escuela</mat-label>
+      <input formControlName="clave" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Grado Escolar</mat-label>
+      <input formControlName="gradoEscolar" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nivel</mat-label>
+      <input formControlName="nivelAcademico" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Promedio</mat-label>
+      <input formControlName="promedio" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nota</mat-label>
+      <textarea formControlName="nota" matInput></textarea>
+    </mat-form-field>
+
+    <div class="controles">
+      <button mat-flat-button color="primary" type="submit">
+        Guardar Cambios
+      </button>
+      <a mat-stroked-button routerLink="">
+        Cancelar
+      </a>
+    </div>
+
+  </div>
+
+</form>

@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <span>
+    <a routerLink="" mat-button>
+      <mat-icon style="margin-right: 25px;">school square_foot</mat-icon> Control Escolar
+    </a>
+  </span>
+
+  <!-- <div>
+    <a mat-button routerLink="alumnos/principales">
+      <mat-icon>search</mat-icon>Alumnos Principales
+    </a>
+  </div> -->
+
+  <button mat-button [matMenuTriggerFor]="alumnos">Alumnos</button>
+  <mat-menu #alumnos="matMenu">
+    <button mat-menu-item routerLink="alumnos/principales">Alumnos Principales</button>
+    <button mat-menu-item routerLink="alumnos/domicilio">Alumnos Domicilio</button>
+    <button mat-menu-item routerLink="alumnos/papas/papa">Datos Padre</button>
+    <button mat-menu-item routerLink="alumnos/papas/mama">Datos Mama</button>
+    <button mat-menu-item routerLink="alumnos/academicos">Datos Escolares</button>
+    <button mat-menu-item routerLink="alumnos/adicional">Datos Adicionales</button>
+    <mat-divider></mat-divider>
+    <button mat-menu-item routerLink="alumnos/preinscripcion">Pre-Inscripcion</button>
+    <button mat-menu-item routerLink="alumnos/inscripcion">Re IInscripcion</button>
+  </mat-menu>
+
+
+</mat-toolbar>

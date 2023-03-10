@@ -1,0 +1,59 @@
+<h2>Pre Inscripcion</h2>
+
+<app-alumnobuscar (xnombre)="buscarAlumno($event)" (xnofolio)="buscarAlumno($event)"></app-alumnobuscar>
+<hr>
+
+<ng-container>
+  <div class="container">
+
+    <form #nuevaInscripcion="ngForm" (submit)="guardarPreinscripcion(nuevaInscripcion.value)" [formGroup]="form">
+      <div class="row">
+
+
+        <mat-form-field appearance="outline">
+          <mat-label>Niveles</mat-label>
+          <mat-select formControlName="nivelId">
+            <mat-option *ngFor="let nivel of niveles" [value]="nivel.paisid">{{nivel.nombrePais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Grado Escolar</mat-label>
+          <mat-select formControlName="gradoId">
+            <mat-option *ngFor="let nivel of niveles" [value]="nivel.paisid">{{nivel.nombrePais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Ciclo Escolar</mat-label>
+          <mat-select formControlName="cicloId">
+            <mat-option *ngFor="let nivel of niveles" [value]="nivel.paisid">{{nivel.nombrePais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Turno</mat-label>
+          <mat-select formControlName="turnoId">
+            <mat-option *ngFor="let nivel of niveles" [value]="nivel.paisid">{{nivel.nombrePais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Mes Inscripcion</mat-label>
+          <mat-select formControlName="mesInscriipcionId">
+            <mat-option *ngFor="let nivel of niveles" [value]="nivel.paisid">{{nivel.nombrePais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Carrera</mat-label>
+          <mat-select formControlName="carreraId">
+            <mat-option *ngFor="let nivel of niveles" [value]="nivel.paisid">{{nivel.nombrePais}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+
+      </div>
+    </form>
+
+  </div>
+</ng-container>

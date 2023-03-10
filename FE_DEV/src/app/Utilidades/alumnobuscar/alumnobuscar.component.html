@@ -1,0 +1,17 @@
+<div class="col-md-10">
+
+  <mat-form-field appearance="outline" class="search">
+    <mat-label>
+      <mat-icon>search</mat-icon> Buscar Folio
+    </mat-label>
+    <input type="text" #sFolio matInput (keyup.enter)="buscarAlumnoFolio($event)" />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>
+      <mat-icon>search</mat-icon> Buscar Nombre
+    </mat-label>
+    <input #sNombre matInput (keyup.enter)="buscarAlumnoNombre($event)" />
+  </mat-form-field>
+
+</div>

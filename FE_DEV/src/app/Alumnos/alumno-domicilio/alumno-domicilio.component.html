@@ -1,0 +1,50 @@
+<h2>Alumno Domicilio</h2>
+
+<app-alumnobuscar (xnombre)="buscarAlumno($event)" (xnofolio)="buscarAlumno($event)"></app-alumnobuscar>
+<hr>
+
+<form #newAlumno="ngForm" (submit)="guardarCambios(newAlumno.value)" [formGroup]="form">
+
+<div class="col-md-4">
+
+  <mat-form-field appearance="outline">
+    <mat-label>Telefono Alumno</mat-label>
+    <input formControlName="telefonoAlumno" matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Celular Alumno</mat-label>
+    <input formControlName="celularAlumno" matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Direccion</mat-label>
+    <input formControlName="direccionAlumno" matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Coloni/Fraccionamiento</mat-label>
+    <input formControlName="colonia" matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Codigo Postal</mat-label>
+    <input formControlName="codigoPostal" matInput />
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Observaciones</mat-label>
+    <textarea placeholder="Ingrese observaciones" formControlName="observaciones" matInput></textarea>
+  </mat-form-field>
+
+    <div class="controles">
+      <button mat-flat-button color="primary" type="submit">
+        Guardar Cambios
+      </button>
+      <a mat-stroked-button routerLink="">
+        Cancelar
+      </a>
+    </div>
+
+</div>
+</form>

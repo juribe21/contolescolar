@@ -1,0 +1,31 @@
+button {
+    margin-right: 1rem;
+}
+
+mat-form-field {
+    margin-right: 5px;
+    vertical-align:auto;
+    width: 300px;
+}
+
+
+
+.checbox{
+    text-align: center;
+    vertical-align:middle;
+    width: 305px;
+}
+
+.last {
+    margin-bottom: 10px;
+}
+
+.search{
+    margin-right: 100px;
+}
+
+ .txtAreas{
+  width: 800px;
+  height: 200px;
+}
+

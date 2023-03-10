@@ -1,0 +1,74 @@
+<h2>Alumno Adicionales</h2>
+
+<app-alumnobuscar (xnombre)="buscarAlumno($event)" (xnofolio)="buscarAlumno($event)"></app-alumnobuscar>
+<hr>
+
+<form #newAlumno="ngForm" (submit)="guardarCambios(newAlumno.value)" [formGroup]="form">
+
+  <div class="col-md-4">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Poliza Seguro</mat-label>
+      <mat-select formControlName="polizaSeguroId">
+        <mat-option *ngFor="let poliza of polizas" [value]="poliza.polizaId">{{poliza.noPoliza}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Enfermedad</mat-label>
+      <input formControlName="enfermedad" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Vigencia de Seguro</mat-label>
+      <input formControlName="vigencia" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input formControlName="email" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Estado Civil</mat-label>
+      <mat-select formControlName="estadoCivilId">
+        <mat-option value=1>SOLTERO</mat-option>
+        <mat-option value=2>CASADO</mat-option>
+        <mat-option value=3>SEPARADO</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre Conyuge</mat-label>
+      <input formControlName="nombreConyuge" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Religion</mat-label>
+      <input formControlName="religion" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Tipo Sangre</mat-label>
+      <input formControlName="tipoSangre" matInput>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>CURP</mat-label>
+      <input formControlName="curp" matInput>
+    </mat-form-field>
+
+
+    <div class="controles">
+      <button mat-flat-button color="primary" type="submit">
+        Guardar Cambios
+      </button>
+      <a mat-stroked-button routerLink="">
+        Cancelar
+      </a>
+    </div>
+
+
+  </div>
+</form>

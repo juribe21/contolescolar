@@ -1,0 +1,87 @@
+<!-- <mat-sidenav-container></mat-sidenav-container> -->
+<mat-sidenav mode="side" opened="">
+
+  <button mat-button class="menu-button" [routerLink]="['alumnos/principales', true,false]">
+    <mat-icon>group_add</mat-icon>
+    <span>Nivel Basico</span>
+  </button>
+  <br>
+  <button mat-button class="menu-button" [routerLink]="['alumnos/principales', true,true]">
+    <mat-icon>group_add</mat-icon>
+    <span>Preparatoria / Universidad</span>
+  </button>
+  <br>
+  <button mat-button class="menu-button" routerLink="alumnos/consultaAlumno">
+    <mat-icon>person</mat-icon>
+    <span>Consulta Alumno</span>
+  </button>
+  <br>
+  <button mat-button class="menu-button">
+    <mat-icon>list</mat-icon>
+    <span>Inscritos</span>
+  </button>
+  <br>
+  <button mat-button class="menu-button">
+    <mat-icon>history</mat-icon>
+    <span>Historial</span>
+  </button>
+  <br>
+  <button mat-button class="menu-button">
+    <mat-icon>group</mat-icon>
+    <span>Becados</span>
+  </button>
+  <br>
+  <button mat-button class="menu-button">
+    <mat-icon>list</mat-icon>
+    <span>CURP's</span>
+  </button>
+  <br>
+
+  <button mat-button class="menu-button" routerLink="alumnos/listageneral">
+    <mat-icon>list</mat-icon>
+    <span>Nombre, Edad, Correo</span>
+  </button>
+  <br>
+
+  <button mat-button class="menu-button">
+    <mat-icon>settings_suggest</mat-icon>
+    <span>Cambiar Password</span>
+  </button>
+  <br>
+
+  <button mat-button class="menu-button">
+    <mat-icon>settings_suggest</mat-icon>
+    <span>IMT Admin</span>
+  </button>
+  <br>
+
+  <button mat-button class="menu-button">
+    <mat-icon>settings_suggest</mat-icon>
+    <span>Baja Alumno</span>
+  </button>
+  <br>
+  <button mat-button class="menu-button">
+    <mat-icon>logout</mat-icon>
+    <span>Salir</span>
+  </button>
+  <br>
+
+</mat-sidenav>
+
+<!--
+  <mat-sidenav-content>
+    <div class="content mat-elevation-z4">
+
+      <div>
+        <h2>Alumnos Inscritos</h2>
+        <app-alumno-principales [alumnos]="alumnosInscritos"></app-alumno-principales>
+      </div>
+
+      <div class="content mat-elevation-z4">
+        <h2>Alumnos No Inscritos</h2>
+        <app-alumno-principales [alumnos]="alumnosNoInscritos"></app-alumno-principales>
+      </div>
+    </div>
+
+  </mat-sidenav-content>
+-->

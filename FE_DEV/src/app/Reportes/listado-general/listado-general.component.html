@@ -1,0 +1,98 @@
+<ng-container>
+  <table #table mat-table [dataSource]="reporteGeneral" class="mat-elevation-z8 tabla-general">
+    <!-- tabla-general -->
+    <!-- <ng-container matColumnDef="folio">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Folio</th>
+      <td mat-cell *matCellDef="let element">{{element.folio}}</td>
+    </ng-container> -->
+
+    <ng-container matColumnDef="noFolio">
+      <th mat-header-cell class="classHeader" class="classHeader" *matHeaderCellDef>NoFolio</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.noFolio}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreAlumno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Nombre</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.nombreAlumno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="apellidoPaterno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>ApPaterno</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.apellidoPaterno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="apellidoMaterno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>ApMaterno</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.apellidoMaterno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="edoAlumno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Edo Alumno</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.edoAlumno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="sexo">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Sexo</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.sexo}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="telefonoAlumno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Telefono</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.telefonoAlumno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="celularAlumno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Cell</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.celularAlumno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="direccionAlumno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Direccion</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.direccionAlumno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="colonia">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Colonia</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.colonia}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombreCiudad">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Ciudad</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.nombreCiudad}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="nombrePais">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Pais</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.nombrePais}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="gobierno">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Gob</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.gobierno}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="email">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>email</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.email}}</td>
+    </ng-container>
+    <ng-container matColumnDef="curp">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>CURP</th>
+      <td mat-cell class="classFolio" *matCellDef="let element">{{element.curp}}</td>
+    </ng-container>
+
+
+
+
+    <ng-container matColumnDef="acciones">
+      <th mat-header-cell class="classHeader" *matHeaderCellDef>Acciones</th>
+      <td mat-cell *matCellDef="let element">
+        <a routerlink="" mat-flat-button color="primary">Editar</a>
+        <button mat-flat-button color="warn">Borrar</button>
+      </td>
+    </ng-container>
+
+
+    <tr mat-header-row *matHeaderRowDef="columnas"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnas"></tr>
+  </table>
+</ng-container>

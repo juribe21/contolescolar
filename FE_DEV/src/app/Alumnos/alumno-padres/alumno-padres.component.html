@@ -1,0 +1,54 @@
+<h2>Alumno Datos {{padre | uppercase }}</h2>
+
+<app-alumnobuscar (xnombre)="buscarAlumno($event)" (xnofolio)="buscarAlumno($event)"></app-alumnobuscar>
+<hr>
+
+<form #newAlumno="ngForm" (submit)="guardarCambios(newAlumno.value)" [formGroup]="form">
+
+  <div class="col-md-4">
+
+    <mat-form-field appearance="outline">
+      <mat-label>Nombre Familiar</mat-label>
+      <input formControlName="nombreFamiliar" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido Paterno</mat-label>
+      <input formControlName="apPaternoFamiliar" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Apellido Materno</mat-label>
+      <input formControlName="apMaternoFamiliar" matInput />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Parentesco</mat-label>
+      <mat-select formControlName="tipoFamiliarId">
+        <mat-option *ngFor="let familiar of familiares" [value]="familiar.tipoFamiliarId">
+          {{familiar.descripcionFamiliar}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Observaciones</mat-label>
+      <textarea formControlName="observaciones" matInput></textarea>
+    </mat-form-field>
+
+    <div class="row">
+      <mat-checkbox formControlName="tutor">Tutor</mat-checkbox>
+    </div>
+
+
+    <div class="controles">
+      <button mat-flat-button color="primary" type="submit">
+        Guardar Cambios
+      </button>
+      <a mat-stroked-button routerLink="">
+        Cancelar
+      </a>
+    </div>
+
+  </div>
+
+</form>

@@ -1,0 +1,25 @@
+.contenedor{
+    margin-left: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+/* height: auto; */
+.content {
+    margin: 16px;
+    margin-left: 330px;
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    /* border-radius: 10px; */
+}
+
+
+mat-sidenav-container {
+    height: calc(100vh - 65px);
+}
+
+mat-icon {
+    margin-right: 10px;
+}

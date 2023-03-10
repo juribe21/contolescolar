@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* html, body { height: 100%; } */
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+mat-form-field {
+    margin-right: 10px;
+    vertical-align:auto;
+    width: 400px;
+}
+
+
+.controles{
+    margin-top: 50px;
+}
+
+textarea {
+    width: 400px;
+    height: 100px;
+}
+
+hr{
+    max-width: 810px;
+}
+
+html, body { height: 100%; }

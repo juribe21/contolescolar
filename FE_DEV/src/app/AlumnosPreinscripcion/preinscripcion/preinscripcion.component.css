@@ -1,0 +1,17 @@
+button {
+    margin-right: 1rem;
+}
+
+mat-form-field {
+    margin-right: 10px;
+    vertical-align:auto;
+    width: 400px;
+}
+
+.last {
+    margin-bottom: 10px;
+}
+
+.search{
+    margin-right: 100px;
+}
