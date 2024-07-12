@@ -31,7 +31,7 @@ const routes: Routes = [
   { path: 'alumnos/adicional', component: AlumnoAdicionalesComponent }, // Top Menu
   { path: 'alumnos/adicional/:folio', component: AlumnoAdicionalesComponent },
 
-  { path: 'alumnos/listageneral', component: ListadoGeneralComponent }, // Top Menu
+  { path: 'alumnos/listageneral', component: ListadoGeneralComponent },
   { path: 'alumnos/consultaAlumno', component: ConsultaAlumnoComponent},
 
   { path: 'alumnos/preinscripcion', component: PreinscripcionComponent }, // Top Menu

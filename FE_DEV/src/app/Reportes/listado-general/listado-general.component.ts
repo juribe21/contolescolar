@@ -1,7 +1,9 @@
+import { RepositionScrollStrategy } from '@angular/cdk/overlay';
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { from, Observable } from 'rxjs';
 import { ReporteGeneralDTO } from '../DTOS/reportegeneralDTO';
 import { ReportesService } from '../reportes.service';
 
@@ -17,8 +19,13 @@ export class ListadoGeneralComponent implements OnInit {
   columnas = ['noFolio', 'nombreAlumno', 'apellidoPaterno', 'apellidoMaterno', 'edoAlumno', 'sexo', 'telefonoAlumno', 'celularAlumno',
     'direccionAlumno', 'colonia', 'nombreCiudad', 'nombrePais', 'gobierno', 'email','curp', 'acciones'];
 
+    lista: Observable<ReporteGeneralDTO[]>;
+    alumonos$:Observable<ReporteGeneralDTO[]>;
+
   ngOnInit(): void {
-    this.cargarReporteGeneral();
+    this.cargarReporteGeneralII();
+    this.cargarReporteGeneralFrom();
+
   }
 
   cargarReporteGeneral() {
@@ -30,6 +37,25 @@ export class ListadoGeneralComponent implements OnInit {
       }, error => console.log(error));
   }
 
+  // ---------------
 
+  cargarReporteGeneralII() {
+    this.lista = this.reportesServicio.reporteGeneral();
+    //   this.lista.subscribe(data => {
+    //     this.reporteGeneral = data
+    // });
+  }
+
+
+  cargarReporteGeneralFrom() {
+    //this.lista = this.reportesServicio.reporteGeneral();
+
+    this.alumonos$ = from(this.lista);
+    
+    this.alumonos$.subscribe(data => {
+        this.reporteGeneral = data
+    });
+
+  }
 
 }
