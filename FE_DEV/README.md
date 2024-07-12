@@ -35,8 +35,11 @@ https://www.youtube.com/watch?v=2xx3JnE962s -- Angular Deployment OK Video
 
 ---
 
-Deploy Angular application with Azure Static Web App Service and GitHub Actions
+## Deploy Angular application with Azure Static Web App Service and Azure DevOps Pipeline
+
 -- Youtube: https://www.youtube.com/watch?v=daOE9aec7T4
+
+## --
 
 How to Use Azure Static Web Apps to Deploy an Angular App (web page)
 -- https://www.freecodecamp.org/news/how-to-use-azure-static-web-apps-to-deploy-angular-app/
